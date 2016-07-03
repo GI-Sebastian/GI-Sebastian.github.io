@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "Digitale Reliefanalyse - Hangneigung"
+date:   2015-01-15 14:40:12 +0200
+categories: jekyll update
+---
+
+Die Auflösung eines Rasters hat einen sehr großen Einfluss auf den Informationsgehalt eines Datensatzes. In diesem Post stelle ich euch vor wie sich die Häufigkeitsverteilungen mit abnehmender Auflösung verändern.
+
+## Übung 01: Hangneigung
+
+### Arbeitsschritte
+ 
+Als Erstes wird eine .gdb (GeoDataBase) angelegt. Im nächsten Schritt wird das DEM in die
+WGS_1984_UTM_Zone_11N umprojiziert und in der .gdb abgespeichert. Es muss bei
+kontinuierlichen Daten wie Höhenmodellen auf die geeignete Resampling Methode geachtet
+werden. In diesem Fall wird „Bilinear“ angewandt. Anderen Resampling Methoden (z.B.:
+„Nearest“) sind für diskontinuierliche Rasterdaten passender.
+Als Nächstes wird mit Hilfe von Python das DEM, gemäß der folgenden Koordinaten,
+zugeschnitten: x-min:240000; y-min: 4161150; x-max: 303000; y-max:4196000.
+Im Folgenden wird die Zellengröße (Resampling-Methode: Bilinear) auf 25m, 100m, 200m
+und 500m neu berechnet. Mit Hilfe einer for-loop wird die Hangneigung in Prozent für die
+jeweiligen Auflösungen berechnet.
+
+Im Abschluss werden die Histogramme geplottet. Hierfür werden die Werte der
+Hangneigungsraster in Arrays abgelegt. Mittels der „numpy“ und „pyplot“ Module werden die
+Histogramme erstellt und visualisiert. Als sinnvolle Klassenanzahl wurde 500 ermittelt.
+
+### Inwiefern verändern sich die Verteilungen und Mittelwerte mit der Auflösung und warum?
+
+Durch das Resampling in verschiedenen Auflösungen verändert sich unter anderem der
+Wertebereich. Tabelle 1 zeigt, dass sich mit geringer werdender Auflösung der Wertebereich
+reduziert. Analog hierzu verändern sich auch die Extrem- und Mittelwerte. Der Minimalwert
+der Hangneigung in Prozent bewegt sich leicht nach oben, während sich der Maximalwert
+geringer wird. Für die Mittelwerte gilt, je kleiner die Auflösung desto höher wird auch der
+Mittelwert der Verteilung der Hangneigung in Prozent (vgl. Tabelle).
+
+![Histogram](/assets/DR_01/histogramm.png)
+
+Die Abbildung (oben) zeigt die Häufigkeiten in Prozent gegen die Hangneigungswerte in Prozent
+als Histogramm visualisiert. Die beschriebenen Effekte werden auch hier ersichtlich.
+Zunächst ist gut erkennbar, dass es sich alle Auflösungen eine rechtsschiefe bezüglich ihrer
+Verteilung aufweisen. Diese Tatsache nimmt mit größer werdender Auflösung zu. Hierdurch
+lässt sich auch die Abnahme des Mittelwerts erklären.
+Diese Beobachtungen lassen sich durch die Generalisierung, hervorgerufen durch das
+Resampling, erklären. Im Falle unseres Datensatzes (vgl. Tabelle) wird der Wertebereich von
+der minimalen Höhe zur maximalen Höhe um 3% geschmälert im Vergleich zum Original
+Datensatz (Auflösung: 28,3m).
+
+![Tabelle](/assets/DR_01/tabelle.png)
+
+
+This work was done together with [Pascal Krafft](http://pascalkrafft.xyz/) and Mario Dolancic.

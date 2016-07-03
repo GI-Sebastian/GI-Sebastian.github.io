@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "Digitale Reliefanalyse - Tallängsprofile, Relief und Talvolumen"
+date:   2015-02-10 10:11:10 +0200
+categories: jekyll update
+
+---
+In dieser Übung wurden zwei Gebiete unterschiedlicher geomorphologischer Genese verglichen. Für die Analysen wurden zwei digitale Höhenmodelle aus dem US-Bundesstaat Idaho herangezogen.
+
+## Übung 03: Tallängsprofile, Relief und Talvolumen
+
+### Datenübersicht und allgemeine Arbeitsschritte
+
+
+Das erste Höhenmodell deckt eine Fläche von 222 km2 ab und ist durch eine fluviale Entstehungsgeschichte geprägt. Während das zweite Höhenmodell eine Fläche 183 km2 erfasst und eine deutlich glaziale Entstehungsgeschichte aufweist. Jedoch kann angenommen werden, dass fluviale Erosionsprozesse, nach dem Zurückschreiten der Vergletscherung einer Vielzahl der glaziale Erosions- und Akkumulationsformen
+überprägt haben.
+
+Alle hier vorgestellten Arbeitsschritte wurden mithilfe von Python durchgeführt. Genauer wurden Folgende Libraries verwendet: ArcPy, NumPy, MathPlot und PyPlot. Darüber hinaus wurden visuelle Arbeitsschritte mit ArcMap durchgeführt.
+
+### Tallängsprofil
+
+Ein Tallängsprofil, welches durch fluviale Erosion und Akkumulation geformt wurde, weist im Idealfall ein konkaves Gefälle auf (vgl. Abb. 1 rote gestrichelte Linie) und wird auch als ausgeglichenes Längsprofil bezeichnet. Dies begründet sich durch ein kleiner werdendes Gefälle und einer flussabwärts zunehmenden Abflussmenge aufgrund eines sich vergrößernden Einzugsgebietes. Diese idealisierte Form mit einem Oberlauf mit überwiegender Tiefenerosion, einem Mittellauf mit geringerem Gefälle undausgeglichenen Erosions und Akkumulations Verhältnis, sowie einem Unterlauf, bei dem die Akkumulation vorherrscht kommt in der Natur so nicht vor. Ebenso wird ein komplettes Flusslängsprofil von der Quelle bis zur Mündung, der Haupterosionsbasis, abgebildet. Die hier errechneten Profile zeigen jedoch nur einen Ausschnitt aus einem kompletten Tallängsprofil.
+
+Beim Betrachten des fluvialen Tallängsprofils lässt sich klar erkennen, dass der idealisierte konkave Verlauf durch einen konvexen Knickpunkt gestört wird. Demzufolge könnte sich an dieser Stelle (vgl. Abb. 1 ab ca. 4000m im Verlauf) eine regionale Erosionsbasis befinden. Beispielsweise dadurch, dass der Fluss in einen größeren Fluss mündet. Ebenso ist vorstellbar, dass das die Tiefenerosion des Flusses an dieser Stelle nicht imstande ist, ein ausgeglichenes Längsprofil zu schaffen, oder dass der Knickpunkt erst vor relativ kurzer Zeit entstanden und deshalb noch nicht geglättet wurde. Dies kann durch lithologische oder tektonische Besonderheiten, wie Verwerfungen quer zum Fluss oder veränderte Abtragungsresistenzen bei wechselndem geologischem Untergrund bedingt sein. Ferner können lokale tektonische Hebungen ebenso für eine Modifikation der Erosionsbasis verantwortlich sein.
+
+![Laengsprofil_01](/assets/DR_03/laengsprofil_1.png)
+
+Bei dem höhen Modell welches durch glaziale Formungsprozesse geprägt wurde, kann davon ausgegangen werden, dass es in diesem Gebiet zu keiner vollkommenen Vergletscherung gekommen ist. Demzufolge handelt es sich um mehrere Kargletscher welche in unterschiedlich großen Talgletschern münden. Diese mündeten Teilweise in größere Talgletscher. Nach dem abschmelzen der Gletscher bleiben die von den Kargletschern geformten Kare und die Karschwellen erhalten. Zeugen der Talgletscher sind vor allem die trogförmigen Täler und teilweise Hängetäler. Kleinskalige glaziale Akkumulation- und Erosionsformen werden nicht als Erklärung hinzugefügt, da der diese wahrscheinlich durch die Auflösung des DHM nicht erfasst werden.
+
+![Laengsprofil_02](/assets/DR_03/laengsprofil_2.png)
+
+
+Das glaziale Tallängsprofil zeigt einen häufigen Wechsel der lokalen Erosionsbasis an. Dies lässt sich deutlich in Abb. 1 durch das treppenförmige Profil erkennen. Die ersten beiden Änderungen lassen sich durch die Karwand, einen vermutlichen Karsee und die Karschwelle erklären. Bei der folgenden Sequenz kann es sich um eine Abfolge mehrerer Hängetäler handeln. Das heißt es gibt einen großen Höhenunterschied
+zwischen dem Zufluss und dem Vorfluter. Ebenso können lokale Änderungen der Erosionbasis durch die bereits bei dem fluvialen Längsprofil herangezogenen Gründe erklärt werden. Zumal seit Ende der Vergletscherung in diesem Gebiet die fluvialen Erosion- und Akkumulationsprozesse begonnen haben die Landschaft zu verändern.
+
+Abbildung 2 zeigt die logarithmierten Tallängsprofile in den beiden Untersuchungsgebieten. Diese Repräsentationsform besitzt den Vorteil, dass vorhandene Gefällsunterschiede in den Unterlauf, welche in der absoluten Darstellung nicht erkennbar sind, hervortreten. Außerdem wird die Neigung der Profillinie geringer und leichter interpretierbar. Dementsprechend hat das glaziale Längsprofil einen gleichmäßigeren Verlauf, während das fluviale Tallängsprofil den deutlichen Knick, aufgrund einer Änderung der Erosionsbasis, aufweist.
+
+### Relief
+
+In dieser Aufgabe wurde ein Raster erstellt, welches das geschätzte Abtragungsvolumen in den Untersuchungsgebieten anzeigt. Hierzu wurde eine interpolierte Oberfläche erstellt, welche einen Initialstatus der Abtragungsprozesse darstellt. Diese Oberfläche wurde durch einen Interpolation
+(IDW-Tool) der höchsten Gratpunkte, welche aus dem Ausgangshöhenmodell generiert wurden, erstellt.
+
+Abbildung 3 zeigt jeweils die Höhenmodelle des fluvialen und glazialen Untersuchungsgebiets, als auch die Interpolationsraster. Auffällig in den Interpolationsergebnissen sind Felder die einen negativen Wert aufweisen, da sie Flächen aufweisen in denen Relief aufgebaut und nicht abgetragen wurde. Es kann angenommen werden, dass es sich hierbei um Schwächen dieser Methode handelt.
+
+![Oberflaechenmodelle](/assets/DR_03/oberflachenmodelle.png)
+
+Eine weitere Schwäche dieser Methode ist die subjektive Auswahl der Gratpunkte. Demzufolge ist beim Austausch des Bearbeiters ein anderes Ergebnis zu erwarten.
+
+Abschließend ist noch anzumerken, dass Interpolationsparameter für ein besseres Interpolationsergebnis aufmerksamer Betrachtet werden sollten. Vor allem Sprünge in den Interpolationsoberflächen könnten hierdurch vermieden werden, beispielsweise durch einen eingeschränkteren Entfernungsradius. Allerdings gibt das interpolierte Raster einen Überblick über einen früheren Zeitpunkt in der Genese des Reliefs wieder.
+
+### Talvolumen
+
+Durch Subtraktion der Interpolationsergebnisse mit dem Höhenmodell lassen sich Raster mit den Volumenwerten des abgetragenen Materials in den Untersuchungsgebieten errechnen. Diese Raster wurde genutzt um ein das Volumen des abgetragenen Materials entlang des längsten hydrologischen Fließweges der
+beiden Untersuchungsgebiete abzubilden (vgl. hierzu Abb. 4).
+
+![Laengsprofil_03](/assets/DR_03/laengsprofil_3.png)
+
+Auffällig ist das die Volumenwerte des abgetragenen Materials bis etwa 8 km vom Ursprung entfernt ähnlich bzw. auf gleichen Niveau verlaufen. Ab dann ist das abgetragene Material im glazialen Gebiet um einen Faktor zwei bis dreimal größer als das Volumen des längsten Fließwerg im fluvial überprägten Gebiet. Die vertikalen Sprünge im Verlauf der Graphen entstehen durch Seitentäler die in das Haupttal
+münden. Aus den größeren Sprüngen im glazialen Gebiet lässt sich schließen, dass der Abtrag in den Seitentälern hier größer war als im Vergleich zu Seitentälern im fluvialen gebiet. Bei der glazialen Erosion übt fließendes Eis eine Schubspannung auf den Untergrund aus. Das Verhältnis von Schubspannung zu Scherfestigkeit des Materials sowie die Schuttführung des Gletschers bestimmen die Abtragungsrate.
+Abschließend kann gesagt werden dass der Abtrag in glazialen Gebirgslandschaften größer ist als in fluvialen.
+
+This work was done together with [Pascal Krafft](http://pascalkrafft.xyz/) and Mario Dolancic.
+
+
+
+
+
+

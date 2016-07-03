@@ -1,0 +1,163 @@
+---
+layout: post
+title:  "Digitale Reliefanalyse - Krümmung und Fließakkumulation"
+date:   2015-01-20 10:11:10 +0200
+categories: jekyll update
+img: /assets/DR_02/histogram_1.png
+---
+
+
+In diesem Post werden Krümmungswerte und hydrologischen Raster aus dem
+Ausgangsdatensatz, welcher bereits in [Übung 01]({% post_url 2015-01-15-DR-01 %}) verwendet wurde, berechnet. Das Pre-Processing - Transformation in ein metrisches Koordinatensystem und 
+Resampling in vier Auflösungsstufen (25, 100, 200 und 500m) - stammt ebenso aus der vorangehenden Aufgabenstellung.
+
+
+## Übung 02: Krümmung und Fließakkumulation
+
+### Datenübersicht und allgemeine Arbeitsschritte
+ 
+
+
+Alle hier vorgestellten Arbeitsschritte wurden mithilfe von Python durchgeführt. Genauer wurden Folgende Libraries verwendet: ArcPy, NumPy, MathPlot und PyPlot.
+
+Als ersten Schritt wurde eine neue Geodatabase für diese Übung erstellt. Die vier Raster wurden in diese importiert. In unserem Skript wird zunächst diese Geodatabase als Workspace definiert und die vier Raster als neue Variablen hinzugefügt.
+
+Für alle Raster wurde die Krümmung der gesamten Oberfläche sowie die Horizontal-
+und Profilkrümmung berechnet. Mit dem FocalStatistics Tool wurden die Raster mit
+einem rechteckigen Nachbarschaftstyp und mit der Entfernung von 3*3 Zelleinheiten
+gefiltert bzw. geglättet. Als Methode wurde das arithmetische Mittel angewandt.
+Anschließend wurden die Horizontal- und Profilkrümmungsraster in jeweils drei neue
+Klassen eingeteilt. Werte unterhalb von -0,05 wurden als konkav, Wert oberhalb von
+0.05 wurden konvex und die restlichen (Werte zwischen -0,05 bis 0,05) als eben
+klassifiziert.
+
+Parallel hierzu wurde für alle Raster die Hangneigung in Gradeinheiten berechnet.
+Ebenso wurden diese Raster neu klassifiziert. Die Hangneigung wurde in flache und
+steile Klassen differenziert.
+
+Aus den konkaven, konvexen und flachen Klassen für die Horizontal- und
+Profilkrümmungsraster werden die Reliefklassifikationen in neun Klassen nach Dikau
+klassifiziert und eine zehnte Klasse für flache Oberflächen hinzugefügt.
+Aus diesen allgemeinen Arbeitsschritten werden in erster Linie die Horizontal- und
+Profilkrümmungsraster weiter verwendet.
+
+### Häufigkeitsverteilung der Profil und Horizontalkrümmung
+
+Die im ersten Abschnitt beschriebenen Berechnungen wurden im folgenden genutzt
+um jeweils die Häufigkeitsverteilungen der Profil-und Horizontalkrümmung für alle
+Höhenmodellauflösungen in ein Diagramm zu plotten (vgl. Abb. 1 und 2). Zusätzlich
+wurden die Linienfarben identisch dargestellt und die Mittelwerte ausgegeben um
+einen Vergleich der Werte sowohl visuell als auch quantitativ zu erleichtern (vgl. Tab.
+1). Der X-Achsenbereich verläuft von -1 bis +1, da sich hier die meisten Werte
+befinden. Der Y-Achsenbereich wurde manuell auf 16 begrenzt, da keine größeren
+Häufigkeitsverteilungen vorliegen (vgl. Abb. 1 und 2).
+
+![Histogram_01](/assets/DR_02/histogram_1.png)
+
+![Histogram_01](/assets/DR_02/histogram_2.png)
+
+Die häufigsten Werte treten sowohl bei der Profil- als auch bei der
+Horizontalkrümmung im Wertebereich um den Nullpunkt auf. Daraus lässt sich
+schließen, dass viele Oberflächen der Hänge in Horizontal- oder Vertikalrichtung im
+Forschungsgebiet eben verlaufen. Hieraus lässt sich jedoch keine Aussage
+bezüglich der Reliefklassifikation nach Dikau machen, da sich durch unterschiedliche
+Kombinationen unebene Klassen bilden können.
+
+Ebenso auffällig ist die unimodale Verteilung der Histogramme. Mit geringerer
+Auflösung verstärkt sich dieser Effekt deutlich. Die Streuung im positiven als auch
+negativen Wertebereich zeigt sich ebenfalls sehr regelmäßig. Dieser Effekt verstärkt
+sich auch mit abnehmender Rasterauflösung. Auch der Wertebereich scheint sich mit
+abnehmender Auflösung zu verkleinern. Dies kann durch die in Übung 01
+beobachtete Verringerung der Extremwerte bei abnehmender Auflösung erklärt
+werden.
+
+Durch die relativ geringe Streuung der Krümmungswerte kann angenommen werden,
+dass die Reliefenergie im Untersuchungsgebiet nicht hoch ist.
+
+Tabelle 1 zeigt die Mittelwerte für die Raster in den vier Auflösungsstufen. Hierdurch
+wird bestätigt, dass sich die meisten Werte um den Nullpunkt befinden. Ebenso rückt
+der Mittelwert mit abnehmender Auflösung näher an den Nullpunkt. Auffällig ist, dass
+sich die Mittelwerte zwischen der Horizontal- und Profilkrümmung kaum
+unterscheiden. Fraglich ist der Grund für die letzte Beobachtung.
+
+![Tabelle_01](/assets/DR_02/tabelle_1.png)
+
+### Streuungsvergleich der Krümmungswerte
+
+Für die nächste Aufgabe werden die Horizontalkrümmungswerte zwischen den
+Auflösungsrastern mittels drei Streuungsdiagramme miteinander verglichen. Hierzu
+muss zunächst darauf geachtet werden, dass die Zeilen und Spaltenanzahl zwischen
+den unterschiedlichen Auflösungen angepasst werden. Anschließend wird das
+Raster mit der höheren Auflösung gegen deren Änderung in der niedrigeren
+Auflösung in einem Punktdiagramm dargestellt (vgl. Abb. 4, 5 und 6). Darüber hinaus
+wird in Abbildung 3 das Raster mit 25m Auflösung gegenüber seiner eigenen
+Differenz geplottet. Dies dient zur besseren Verdeutlichung.
+
+Wie bereits oben erklärt, wird auf der X-Achse der Abbildung 3-6 der
+Horizontalkrümmungswert angezeigt. Die Y-Achse repräsentiert die Differenz
+zwischen dem niedriger aufgelösten Raster zum höher aufgelösten Raster oder
+anders ausgedrückt die Änderung zwischen den beiden Rastern.
+
+Abbildung 3 verdeutlicht, dass es zwischen den gleichen Rastern zu keiner
+Abweichung kommt, dies zeigt sich durch die Werte, welche der Y-Achse
+entnommen werden können. Bei den Abbildungen 4-6 zeigt sich eine deutliche
+Abweichung zwischen Auflösungskombinationen. Auffällig ist, dass sich mit niedriger
+Auflösung die Streuung der Werte verringert. Vor allem Abbildung 6 zeigt einen fast
+linearen Verlauf. Die Abnahme der Streuung kann durch die bereits in Übung 01
+beobachtete Verringerung der Extremwerte erklärt werden.
+
+Verglichen mit den Punktwolkenabbildungen der Hangneigung zeigt sich ein
+analoges Bild. Es wird daher angenommen, dass die Veränderung durch das
+Resampling der Raster Auflösung hervorgerufen wird. Dass heißt der Effekt der
+geringeren Streuung ebenso durch die Veränderung der Extremverteilung beeinflusst
+wird.
+
+![Scatterplot](/assets/DR_02/scatter_1.png)
+![Scatterplot](/assets/DR_02/scatter_2.png)
+![Scatterplot](/assets/DR_02/scatter_3.png)
+![Scatterplot](/assets/DR_02/scatter_4.png)
+
+
+### Vergleich der Fließakkumulation
+
+Zur Berechnung der Fließakkumulationsraster wurden ebenso alle Höhenraster in
+den vier Auflösungen verwendet. Zunächst wurden die Höhenraster mit dem Fill Tool
+modifiziert. Dieser Schritt ist notwendig um zu verhindern, dass Zellen mit nicht
+definierter Abflussrichtung in Senken resultieren. Dementsprechend füllt dieses Tool
+mögliche Senken.
+
+Anschließend wird für jede Rasterzelle die Fließrichtung mit dem Flow Direction Tool
+berechnet. Die Ergebnisraster werden abschließend in das Flow Akkumulation Tool
+überführt. Hierdurch werden die Fließakkumulationsraster erzeugt.
+
+Die Fließakkumulationsraster werden in Arrays umgerechnet. Hierdurch können die
+Maximalwerte ausgegeben werden. Um die tatsächliche Fläche zu erhalten, werden
+die Maximalwerte mit den Oberflächenwerten der jeweiligen Rasterauflösungen
+multipliziert. Anschließend werden die m2 Werte in km2 Werte umgerechnet.
+
+![Scatterplot](/assets/DR_02/tabelle_2.png)
+
+Das Grundkonzept der Fließakkumulation bei ArcMap beruht auf der Fließrichtung
+und der summierten Anzahl der Rasterzellen, die in die jeweilige Zelle fließen. Das
+heißt, dass bei einer Auflösung von 500m 5514 Zellen in die Zelle, welche den
+Maximalwert aufweist, fließen. Dementsprechend kann die Einzugsoberfläche, die in
+diese Rasterzelle einfließt, ausgerechnet und in qkm-Werte transformiert werden (vgl.
+hierzu Tabelle 2).
+
+In der mittleren Spalte der Tabelle 2 ist deutlich zu erkennen, dass sich der
+Maximalwert mit niedriger Auflösung verkleinert. Dies lässt sich durch die
+Repräsentation der Wert erklären. Eine Zelle mit der Auflösung von 500m hat eine
+vielfach größere Oberfläche als eine Zelle mit 25m Auflösung.
+
+Durch unterschiedliche Auflösungen kann es zu minimalen Abweichungen bezüglich
+der Wasserscheide kommen in die eine bestimmte Zelle einfließt. Das heißt, durch
+das Resampling kann es zu Modifikationen im Höhenraster führen, welche sich in
+einer verändernden Fließrichtung einzelner Zellen manifestieren. Dessen ungeachtet
+zeigt Tabelle 2, dass der Maximalwert der Fließakkumulation in den
+unterschiedlichen Auflösungen kaum beeinflusst wird. Dementsprechend ist der
+beschriebene Effekt minimal.
+
+This work was done together with [Pascal Krafft](http://pascalkrafft.xyz/) and Mario Dolancic.
+
+
+
