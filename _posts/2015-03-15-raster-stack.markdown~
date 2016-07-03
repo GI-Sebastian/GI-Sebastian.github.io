@@ -6,7 +6,7 @@ categories: jekyll update
 
 ---
 
-A stacked raster file, or raster stack, is a collection of raster layers with the same spatial extent and resolution. Since RGB visualizations in many GIS software need stacked raster images, this howto shows how to stack several raster files to a single raster stack. For this task we will use Python and especially the external [Rasterio](https://github.com/mapbox/rasterio) library. For this example I downloaded a Landsat 8 scene (LC819202820160604) and will stack the blue, green, red, NIR, SWIR 1, and SWIR 2 bands to a single raster file.
+A stacked raster file, or raster stack, is a collection of raster layers with the same spatial extent and resolution. Since RGB visualizations in many GIS software need stacked raster images, this howto shows how to stack several raster files to a single raster stack. For this task we will use Python and especially the external [Rasterio](https://github.com/mapbox/rasterio) library. For this example I downloaded a Landsat 8 scene (LC819202820160604) and I will stack the blue, green, red, NIR, SWIR 1, and SWIR 2 bands to a single raster file.
 
 Rasterio is a very handy wrapper for the main functionalities of [GDAL](http://www.gdal.org/) for Python. Especially, the reading, writing and manipulation of raster data is extremly productive with the usage of Rasterio. 
 
