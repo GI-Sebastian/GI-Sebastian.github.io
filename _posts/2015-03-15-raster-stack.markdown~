@@ -24,7 +24,7 @@ In the next step, I create a variable pointing to the directory where the GeoTif
 raster_path = os.path.join(os.sep, "home", "sebastian, "Documents", "Data", "LC819202820160604")
 ```
 
-Since I want to create a raster stack for the the following bands: blue, green, red, NIR, SWIR 1, and SWIR 2, I create a list variable storing all files according to the bands I wanted to stack. If you don't know the band designation just check it [here](http://landsat.usgs.gov/band_designations_landsat_satellites.php). However, I already know, that the bands I will stack are have the numbering from 2 to 7 and, hence, I search for all files in the directory ending with `B + band_number + .TIF`. The files I will append to a list which I already created out site the loop. Finally, I sort the strings in the list.
+Since I want to create a raster stack for the the following bands: blue, green, red, NIR, SWIR 1, and SWIR 2, I create a list variable storing all files according to the bands I wanted to stack. If you don't know the band designation just check it [here](http://landsat.usgs.gov/band_designations_landsat_satellites.php). However, I already know, that the bands I want to stack have the numbering from 2 to 7. Since the naming of all raster files for Landsat 8 have the same schema I search for all files in the directory ending with "`B[2-7].TIF`". The files will be appended to a list created already outsite the loop. Finally, the strings in the list are sorted.
 
 ```python
 raster_list = []
@@ -51,15 +51,18 @@ for b in raster_list:
         bands.append(array)
 ```
 
-
+The raster stack also needs a output GeoTiff file. 
 
 ```python
 ras_out = os.path.join(raster_root_path, "stack.tif")
 ```
 
+The output GeoTiff file is opened and all properties read out from the initial raster files are stored to the new raster files. Additionally, the count of raster band is set to the length of the band array list 
+and the `nodata` value is set to `0`. With a for-each loop the arrays from the `bands` list are writen to the raster file. The `bands` list is looped and with the `enumerate` function a counter variable is created. The counter variable is needed for the definition to which band the according array will be stored. Because Python indices are zero based the counter must be alterated by +1.
+
+
+
 ```python
-# create the new GTiff raster, where all array objects will be stored as
-# separated raster bands
 with rio.open(ras_out,
               'w',
               width=width,
@@ -67,11 +70,10 @@ with rio.open(ras_out,
               driver=driver,
               crs=crs,
               affine=affine,
-              count=(len(bands)+1),   
+              count=len(bands),   
               dtype=dtype,
               nodata=0
               ) as dst:
-    # iterate over the bands list and write them as band to the GTiff file
     for i, b in enumerate(bands):
         dst.write(b, i+1)
 ```
