@@ -4,7 +4,7 @@ title:  "Dwelling extraction in a refugee camp"
 date:   2015-01-02 18:15:40 +0200
 categories: jekyll update
 ---
-During my study in Salzburg [Pascal Krafft](http://pascalkrafft.xyz/) worked together on a project for the automatic extraction of dwellings in refugee camps. We decided to create a ArcGIS toolbox, so that also other users can adapt this approach to their studies. The following post shows the motivation, workflow, and the results for our developed toolbox. The toolbox was tested for the Lukole refugee camp. Additionally, we created a poster which you can [get as PDF here](/downloads/Poster_Krafft_Scheckel.pdf).
+During my study in Salzburg [Pascal Krafft](http://pascalkrafft.xyz/) and I worked together on a project for the automatic extraction of dwellings in refugee camps. We decided to create a ArcGIS toolbox, so that also other users can adapt this approach to their studies. The following post shows the motivation, workflow, and the results for our developed toolbox. The toolbox was tested for the Lukole refugee camp. Additionally, we created a poster which you can [get as PDF here](/downloads/Poster_Krafft_Scheckel.pdf).
 
 ## Motivation
  

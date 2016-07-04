@@ -151,58 +151,58 @@ Heuristic methods are based on rules of thumb or procedures designed for specifi
 
 ## Sources
 
-*Aerts, J., Eisinger, E., Heuvelink, G., and Stewart, T. (2003). Using linear integer programming for multi-site land-use allocation. Geographical Analysis, 35:148.
-*Beaumont, J. R. (1982). Mathematical programming in human geography. Mathematical Social Sciences, 2(3):213 – 243.
-*Berry, B. J. L. (1961). A method for deriving multifactor uniform regions. Przeglad Geograficzny, 33:263.
-*Bianchi, G. and Church, R. L. (1988). A hybrid fleet model for emergency medical service system design. Social Science & Medicine, 26(1):163 – 171.
-*Boyce, R. R. and Clark, W. A. V. (1964). The concept of shape in geography. Geographical Review, 54:561.
-*Bunge, W. (1962). Theoretical geography. Gleerup, Lund Sweden.
-*Christaller, W. (1966). Central Places in Southern Germany. Prentice Hall, Englewood Cliffs.
-*Church, R. L. (1990). The regionally constrained p-median problem. Geographical Analysis, 22(1):22–32.
-*Church, R. L. (2001). Spatial optimization models. In Baltes, N. J. S. B., editor, International Encyclopedia of the Social & Behavioral Sciences, pages 14811 – 14818. Pergamon, Oxford.
-*Church, R. L. and Bell, T. L. (1988). An analysis of ancient egyptian settlement patterns using location–allocation covering models. Annals of the Association of American Geographers, 78(4):701–714.
-*Church, R. L. and Murray, A. T. (1993). Modeling school utilization and consolidation. Journal of Urban Planning and Development ASCE, 119:23.
-*Church, R. L. and Murray, A. T. (2009). Business site selection, location analysis, and GIS. John Wiley & Sons, Hoboken, N.J.
-*Church, R. L., Stoms, D. M., and Davis, F. W. (1996). Reserve selection as a maximal covering location problem. Biological Conservation, 76(2):105 – 112.
-*Curtin, K. M. and Church, R. L. (2006). A family of location models for multiple type discrete dispersion. Geographical Analysis, 38:248.
-*de Smith, M. J., Goodchild, M. F., and Longley, P. (2007). Geospatial analysis: A comprehensive guide to principles, techniques and software tools. Matador, Leicester, 2nd ed. edition.
-*Duque, J. C., Church, R. L., and Middleton, R. S. (2011). The p-regions problem. Geographical Analysis, 43:104.
-*Erdemir, E. T., Batta, R., Rogerson, P. A., Blatt, A., and Flanigan, M. (2010). Joint ground and air emergency medical services coverage models: A greedy heuristic solution approach. European Journal of Operational Research, 207(2):736–749.
-*Garrison, W. L. (1959). Spatial structure of the economy: Ii. Annals of the Association of American Geographers, 49(4):471–482.
-*Goodchild, M. F. and Massam, B. H. (1969). Some least cost models of spatial administrative systems in southern ontario. Geografiska Annaler, 52(B):86–94.
-*Haggett, P. (1975). Geography: A modern synthesis. Harper & Row, New York, 2nd edition.
-*Hogan, K. and ReVelle, C. (1986). Concepts and applications of backup coverage. Management Science, 32(11):1434–1444.
-*Horner, M. and Downs, J. (2007). Testing a flexible geographic information system-based network flow model for routing hurricane disaster relief goods. Transportation Research Record: Journal of the Transportation Research Board, 2022:47–54.
-*Hudak, P. F., Loaiciga, H. A., and Schoolmaster, F. A. (1993). Application of geographic information systems to groundwater monitoring network design1. JAWRA Journal of the American Water Resources Association, 29(3):383–390.
-*Kim, K., Murray, A. T., and Xiao, N. (2008). A multiobjective evolutionary algorithm for surveillance sensor placement. Environment and Planning B: Planning and Design, 35(5):935–948.
-*Kim, H. O’kelly, M. E. (2009). Reliable p-hub location problems in telecommunication networks. Geographical Analysis, 41(3):283–306.
-*King, L. J. (1962). A quantitative expression of the pattern of urban settlements in selected areas of the united states. Tijdschrift Voor Economische en Sociale Geografie, 53:1.
-*Kuby, M. J. (1987). Programming models for facility dispersion: The p-dispersion and maximum dispersion problems. Geographical Analysis, 19:315.
-*Ligmann-Zielinska, A., Church, R. L., and Jankowski, P. (2008). Spatial optimization as a generative technique for sustainable multiobjective land-use allocation. International Journal of Geographical Information Science, 22(6):601–622.
-*Longley, P. (2011). Geographic information systems & science. Wiley, Hoboken, NJ, 3rd ed edition.
-*Love, R. F., Morris, J. G., and Wesolowsky, G. O. (1988). Facilities location: Models & methods, volume 7 of Publications in operations research series. North-Holland, New York.
-*MacKinnon, R. D. Hodgson, M. J. (1970). Optimal transportation networks: a case study of highway systems. Environment and Planning A, 2(3):267–284.
-*Malcolm, S. and ReVelle, C. (2005). Representational success: A new paradigm for achieving species protection by reserve site selection. Environmental Modeling & Assesment, 10(4):341–348.
-*Matisziw, T. C. and Murray, A. T. (2006). Promoting species persistence through spatial association optimization in nature reserve design. Journal of Geographical Systems, 8:289.
-*Miller, H. J. and Wentz, E. A. (2003). Representation and spatial analysis in geographic information systems. Annals of the Association of American Geographers, 93(3):574–594.
-*Morrill, R. L. (1973). Ideal and reality in reapportionment. Annals of the Association of American Geographers, 63:463.
-*Murray, A. T., Kim, K., Davis, J. W., Machiraju, R., and Parent, R. (2007). Coverage optimization to support security monitoring. Computers, Environment and Urban Systems, 31(2):133 – 147.
-*Nystuen, J. D. (1968). Identification of some fundamental spatial concepts. In Berry, B. J. L. M. D. F., editor, Spatial analysis: A reader in statistical geography, page 35–41. Prentice-Hall, Englewood Cliffs.
-*O’kelly, M. E. (1987). A quadratic integer program for the location of interacting hub facilities. European Journal of Operational Research, 32(3):393–404.
-*Openshaw, S. and Rao, L. (1995). Algorithms for reengineering 1991 census geography. Environment and Planning A, 27:425.
-*Oppong, J. R. and Hodgson, M. J. (1994). Spatial accessibility to health care facilities in suhum district, ghana. The Professional Geographer, 46(2):199–209.
-*Reidhead, V. A. (1979). Linear programming models in archaeology. Annual Review of Anthropology, 8(1):543–578.
-*ReVelle, C. S. and Swain, R. W. (1970). Central facilities location. Geographical Analysis, 2(1):30–42.
-*Schoepfle, O. B. and Church, R. L. (1991). A new network representation of a classic school districting problem. Socio-Economic Planning Sciences, 25:189.
-*Scott, A. J. (1971). Combinatorial programming, spatial analysis and planning. Methuen young books, London.
-*Shirabe, T. (2005). A model of contiguity for spatial unit allocation. Geographical Analysis, 37(1):2–16.
-*Sorensen, P. and Church, R. (2010). Integrating expected coverage and local reliability for emergency medical services location problems. Socio-Economic Planning Sciences, 44(1):8 – 18.
-*Tobler, W. (1970). A computer movie simulating urban growth in the detroit region. Economic Geography, 46(2):234–240.
-*Tong, D. and Murray, A. T. (2012). Spatial optimization in geography. Annals of th Association of American Geographers, 102(6):1290–1309.
-*Von Thunen, J. H. (1826). Der isolirte Staat in Beziehung auf Landwirthschaft und Nationalökonomie. Perthes, Hamburg.
-*Weber, A. (1908). Reine Theorie des Standorts. Mohr, Tübingen.
-*Wentz, E. A. (2000). A shape definition for geographic applications based on edge, elongation and perforation. Geographical Analysis, 32:95.
-*Williams, J. C. (1995). Political redistricting: A review. Papers in Regional Science, 74:13.
-*Williams, J. C. (2002). A zero-one programming model for contiguous land acquisition. Geographical Analysis, 34(4):330–349.
-*Williams, J. C. and ReVelle, C. S. (2004). Using mathematical optimization models to design nature reserves. Frontiers in Ecology and the Environment, 2:98.
-*Wu, X. and Murray, A. T. (2008). Spatial contiguity optimization in land acquisition. Journal of Land Use Science, 2(4):243–256.
+* Aerts, J., Eisinger, E., Heuvelink, G., and Stewart, T. (2003). Using linear integer programming for multi-site land-use allocation. Geographical Analysis, 35:148.
+* Beaumont, J. R. (1982). Mathematical programming in human geography. Mathematical Social Sciences, 2(3):213 – 243.
+* Berry, B. J. L. (1961). A method for deriving multifactor uniform regions. Przeglad Geograficzny, 33:263.
+* Bianchi, G. and Church, R. L. (1988). A hybrid fleet model for emergency medical service system design. Social Science & Medicine, 26(1):163 – 171.
+* Boyce, R. R. and Clark, W. A. V. (1964). The concept of shape in geography. Geographical Review, 54:561.
+* Bunge, W. (1962). Theoretical geography. Gleerup, Lund Sweden.
+* Christaller, W. (1966). Central Places in Southern Germany. Prentice Hall, Englewood Cliffs.
+* Church, R. L. (1990). The regionally constrained p-median problem. Geographical Analysis, 22(1):22–32.
+* Church, R. L. (2001). Spatial optimization models. In Baltes, N. J. S. B., editor, International Encyclopedia of the Social & Behavioral Sciences, pages 14811 – 14818. Pergamon, Oxford.
+* Church, R. L. and Bell, T. L. (1988). An analysis of ancient egyptian settlement patterns using location–allocation covering models. Annals of the Association of American Geographers, 78(4):701–714.
+* Church, R. L. and Murray, A. T. (1993). Modeling school utilization and consolidation. Journal of Urban Planning and Development ASCE, 119:23.
+* Church, R. L. and Murray, A. T. (2009). Business site selection, location analysis, and GIS. John Wiley & Sons, Hoboken, N.J.
+* Church, R. L., Stoms, D. M., and Davis, F. W. (1996). Reserve selection as a maximal covering location problem. Biological Conservation, 76(2):105 – 112.
+* Curtin, K. M. and Church, R. L. (2006). A family of location models for multiple type discrete dispersion. Geographical Analysis, 38:248.
+* de Smith, M. J., Goodchild, M. F., and Longley, P. (2007). Geospatial analysis: A comprehensive guide to principles, techniques and software tools. Matador, Leicester, 2nd ed. edition.
+* Duque, J. C., Church, R. L., and Middleton, R. S. (2011). The p-regions problem. Geographical Analysis, 43:104.
+* Erdemir, E. T., Batta, R., Rogerson, P. A., Blatt, A., and Flanigan, M. (2010). Joint ground and air emergency medical services coverage models: A greedy heuristic solution approach. European Journal of Operational Research, 207(2):736–749.
+* Garrison, W. L. (1959). Spatial structure of the economy: Ii. Annals of the Association of American Geographers, 49(4):471–482.
+* Goodchild, M. F. and Massam, B. H. (1969). Some least cost models of spatial administrative systems in southern ontario. Geografiska Annaler, 52(B):86–94.
+* Haggett, P. (1975). Geography: A modern synthesis. Harper & Row, New York, 2nd edition.
+* Hogan, K. and ReVelle, C. (1986). Concepts and applications of backup coverage. Management Science, 32(11):1434–1444.
+* Horner, M. and Downs, J. (2007). Testing a flexible geographic information system-based network flow model for routing hurricane disaster relief goods. Transportation Research Record: Journal of the Transportation Research Board, 2022:47–54.
+* Hudak, P. F., Loaiciga, H. A., and Schoolmaster, F. A. (1993). Application of geographic information systems to groundwater monitoring network design1. JAWRA Journal of the American Water Resources Association, 29(3):383–390.
+* Kim, K., Murray, A. T., and Xiao, N. (2008). A multiobjective evolutionary algorithm for surveillance sensor placement. Environment and Planning B: Planning and Design, 35(5):935–948.
+* Kim, H. O’kelly, M. E. (2009). Reliable p-hub location problems in telecommunication networks. Geographical Analysis, 41(3):283–306.
+* King, L. J. (1962). A quantitative expression of the pattern of urban settlements in selected areas of the united states. Tijdschrift Voor Economische en Sociale Geografie, 53:1.
+* Kuby, M. J. (1987). Programming models for facility dispersion: The p-dispersion and maximum dispersion problems. Geographical Analysis, 19:315.
+* Ligmann-Zielinska, A., Church, R. L., and Jankowski, P. (2008). Spatial optimization as a generative technique for sustainable multiobjective land-use allocation. International Journal of Geographical Information Science, 22(6):601–622.
+* Longley, P. (2011). Geographic information systems & science. Wiley, Hoboken, NJ, 3rd ed edition.
+* Love, R. F., Morris, J. G., and Wesolowsky, G. O. (1988). Facilities location: Models & methods, volume 7 of Publications in operations research series. North-Holland, New York.
+* MacKinnon, R. D. Hodgson, M. J. (1970). Optimal transportation networks: a case study of highway systems. Environment and Planning A, 2(3):267–284.
+* Malcolm, S. and ReVelle, C. (2005). Representational success: A new paradigm for achieving species protection by reserve site selection. Environmental Modeling & Assesment, 10(4):341–348.
+* Matisziw, T. C. and Murray, A. T. (2006). Promoting species persistence through spatial association optimization in nature reserve design. Journal of Geographical Systems, 8:289.
+* Miller, H. J. and Wentz, E. A. (2003). Representation and spatial analysis in geographic information systems. Annals of the Association of American Geographers, 93(3):574–594.
+* Morrill, R. L. (1973). Ideal and reality in reapportionment. Annals of the Association of American Geographers, 63:463.
+* Murray, A. T., Kim, K., Davis, J. W., Machiraju, R., and Parent, R. (2007). Coverage optimization to support security monitoring. Computers, Environment and Urban Systems, 31(2):133 – 147.
+* Nystuen, J. D. (1968). Identification of some fundamental spatial concepts. In Berry, B. J. L. M. D. F., editor, Spatial analysis: A reader in statistical geography, page 35–41. Prentice-Hall, Englewood Cliffs.
+* O’kelly, M. E. (1987). A quadratic integer program for the location of interacting hub facilities. European Journal of Operational Research, 32(3):393–404.
+* Openshaw, S. and Rao, L. (1995). Algorithms for reengineering 1991 census geography. Environment and Planning A, 27:425.
+* Oppong, J. R. and Hodgson, M. J. (1994). Spatial accessibility to health care facilities in suhum district, ghana. The Professional Geographer, 46(2):199–209.
+* Reidhead, V. A. (1979). Linear programming models in archaeology. Annual Review of Anthropology, 8(1):543–578.
+* ReVelle, C. S. and Swain, R. W. (1970). Central facilities location. Geographical Analysis, 2(1):30–42.
+* Schoepfle, O. B. and Church, R. L. (1991). A new network representation of a classic school districting problem. Socio-Economic Planning Sciences, 25:189.
+* Scott, A. J. (1971). Combinatorial programming, spatial analysis and planning. Methuen young books, London.
+* Shirabe, T. (2005). A model of contiguity for spatial unit allocation. Geographical Analysis, 37(1):2–16.
+* Sorensen, P. and Church, R. (2010). Integrating expected coverage and local reliability for emergency medical services location problems. Socio-Economic Planning Sciences, 44(1):8 – 18.
+* Tobler, W. (1970). A computer movie simulating urban growth in the detroit region. Economic Geography, 46(2):234–240.
+* Tong, D. and Murray, A. T. (2012). Spatial optimization in geography. Annals of th Association of American Geographers, 102(6):1290–1309.
+* Von Thunen, J. H. (1826). Der isolirte Staat in Beziehung auf Landwirthschaft und Nationalökonomie. Perthes, Hamburg.
+* Weber, A. (1908). Reine Theorie des Standorts. Mohr, Tübingen.
+* Wentz, E. A. (2000). A shape definition for geographic applications based on edge, elongation and perforation. Geographical Analysis, 32:95.
+* Williams, J. C. (1995). Political redistricting: A review. Papers in Regional Science, 74:13.
+* Williams, J. C. (2002). A zero-one programming model for contiguous land acquisition. Geographical Analysis, 34(4):330–349.
+* Williams, J. C. and ReVelle, C. S. (2004). Using mathematical optimization models to design nature reserves. Frontiers in Ecology and the Environment, 2:98.
+* Wu, X. and Murray, A. T. (2008). Spatial contiguity optimization in land acquisition. Journal of Land Use Science, 2(4):243–256.

@@ -40,7 +40,7 @@ As a side product we also implemented the Index Calculator tool which can be use
 
 ## Lukole 
 
-In the north-west of the United Republic of Tanzania the refugee camp is situated. It is close to the Rwanda and Burundi border and was erected in order to give refugees that fled due to ethnical and political riots. The camp was managed by the United Nations High Commissioner for Refugees (UNHCR) and was erected in the year 1994. The maximum population the camp had was in the year 2000 with more than 129,000 people. The number of inhabitants declined since then.
+The refugee camp is situated in the north-west of the United Republic of Tanzania. It is close to the Rwanda and Burundi border and was erected in order to give refugees that fled due to ethnical and political riots. The camp was managed by the United Nations High Commissioner for Refugees (UNHCR) and was erected in the year 1994. The maximum population the camp had was in the year 2000 with more than 129,000 people. The number of inhabitants declined since then.
 
 
 ![Area of interest](/assets/IP/aoi.png)
