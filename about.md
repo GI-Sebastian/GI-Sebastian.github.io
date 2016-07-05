@@ -5,7 +5,7 @@ permalink: /about/
 published: true
 ---
 
-![Iseme](/assets/avatar_2.jpg){: .align-rigth}
+![Iseme](/assets/avatar_2.jpg){: .align-right}
 
 ### About me
 
