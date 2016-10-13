@@ -16,12 +16,7 @@ work as a freelancer in Innsbruck. Professionally, I am especially interested in
 
 ### About this blog
 
-This blog presents some projects I worked on during my studies of Applied Geoinf
-ormatics. In addition, I also present some tutorial for the usage of Python in t
-he context of data and spatial sciences. In the near future, I also plan to crea
-te some tutorials for JS, but also in the same context. Feel free to contact me.
- I am pleased about any suggestions for improvement (language as well thematical
-ly).
+This blog presents some projects I worked on during my studies of Applied Geoinformatics. In addition, I also present some tutorial for the usage of Python in the context of data and spatial sciences. In the near future, I also plan to create some tutorials for JS, but also in the same context. Feel free to contact me. I am pleased about any suggestions for improvement (language as well thematically).
 
 
 ### CV and Contact
